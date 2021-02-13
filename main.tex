@@ -1,0 +1,62 @@
+%            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+%                    Version 2, December 2004
+%
+% Copyright (C) 2021 Pierre Luycx
+%
+% Everyone is permitted to copy and distribute verbatim or modified
+% copies of this license document, and changing it is allowed as long
+% as the name is changed.
+%
+%            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+%   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+%
+%  0. You just DO WHAT THE FUCK YOU WANT TO.
+
+
+% === PACKAGES ===
+% Font and encoding
+\documentclass[12pt]{article}
+\usepackage{pxfonts} % Palatino
+\renewcommand{\familydefault}{\sfdefault} % sans-serif
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Paper dimensions
+\usepackage[a4paper,portrait,margin=3cm]{geometry}
+
+% Utils
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{numprint}
+\usepackage{eurosym}
+
+% For a French document (remove for English)
+\usepackage[french]{babel}
+\usepackage{xspace} % put spaces in the right spots
+\frenchbsetup{StandardLists=true} % use bullets instead of hyphens
+
+% Utils (that need to be after babel for some reason)
+\usepackage{listings}
+\lstset{frame=single,numbers=left}
+
+
+% === DOCUMENT ===
+\title{Template \LaTeX}
+\author{Pierre \bsc{Luycx}}
+\date{Février 2021}
+
+\begin{document}
+
+\include{front}
+
+\tableofcontents
+\newpage
+
+\include{sections/00_sample}
+
+\newpage
+\appendix
+
+\include{sections/90_appendix}
+
+\end{document}
