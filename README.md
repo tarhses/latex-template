@@ -12,7 +12,7 @@ TeX is 44 years old, LaTeX 38. I needed a template with more modern visuals, goo
 
 And also, I'm bored. Okay?
 
-## # Can I use it?
+## Can I use it?
 
 Sure. The source code is published under the [Do What the Fuck You Want to Public License](http://www.wtfpl.net) because it is funny.
 
