@@ -1,22 +1,22 @@
 \makeatletter % allow using \@title, \@author, and \@date
 
-\begin{titlepage} % no page number on this page
-\setlength{\parindent}{0pt} % no indent on this page
-
 \begin{center}
     \includegraphics[width=0.5\linewidth]{images/unamur.png}
 \end{center}
 
 \vfill
+\noindent
 {\huge \textbf{\@title}}
 \rule{\paperwidth}{1pt} % will overflow, but we don't care
 
 \vspace{32pt}
+\noindent
 {\Large \@author}
 
 \vspace{10pt}
+\noindent
 {\Large \@date}
 
-\end{titlepage}
+\newpage
 
 \makeatother % reset \makeatletter

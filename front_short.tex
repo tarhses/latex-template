@@ -1,0 +1,21 @@
+\makeatletter % allow using \@title, \@author, and \@date
+
+\begin{tabular}{cc}
+    \makecell{
+        \includegraphics[width=0.3\linewidth]{images/unamur.png}
+    }
+    &
+    \makecell[tl]{
+        {\huge \textbf{\@title}}
+        \rule{\paperwidth}{1pt} % will overflow but we don't care
+        \vspace{8pt}
+        \\
+        {\large \@author}
+        \\
+        {\large \@date}
+    }
+\end{tabular}
+
+\vspace{32pt}
+
+\makeatother % reset \makeatletter

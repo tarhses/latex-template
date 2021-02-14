@@ -6,6 +6,10 @@
 
 Just another LaTeX template I use from time to time.
 
+![Sample screenshots](/sample.png)
+
+As seen above, the front page exists in two forms. In "main.tex", you can use `\input{front_full}` or `\input{front_short}` accordingly.
+
 ## Why?
 
 TeX is 44 years old, LaTeX 38. I needed a template with more modern visuals, good-enough defaults, and usable in French.

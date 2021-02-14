@@ -26,6 +26,7 @@
 
 % Utils
 \usepackage{graphicx}
+\usepackage{makecell}
 \usepackage{hyperref}
 \usepackage{numprint}
 \usepackage{eurosym}
@@ -47,16 +48,14 @@
 
 \begin{document}
 
-\include{front}
+%\input{front_full}
+\input{front_short}
 
-\tableofcontents
-\newpage
+\tableofcontents\newpage
 
-\include{sections/00_sample}
+\input{sections/00_sample}
 
-\newpage
 \appendix
-
-\include{sections/90_appendix}
+\input{sections/90_appendix}
 
 \end{document}
