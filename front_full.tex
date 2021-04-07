@@ -1,13 +1,18 @@
 \makeatletter % allow using \@title, \@author, and \@date
 
+\providecommand{\subtitle}{}
+
 \begin{center}
-    \includegraphics[width=0.5\linewidth]{images/unamur.png}
+    \includegraphics[width=0.6\linewidth]{images/unamur.png}
 \end{center}
 
 \vfill
 \noindent
 {\huge \textbf{\@title}}
 \rule{\paperwidth}{1pt} % will overflow, but we don't care
+
+\noindent
+{\large \subtitle}
 
 \vspace{32pt}
 \noindent

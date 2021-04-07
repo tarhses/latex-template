@@ -1,14 +1,19 @@
 \makeatletter % allow using \@title, \@author, and \@date
 
+\providecommand{\subtitle}{}
+
 \begin{tabular}{cc}
     \makecell{
-        \includegraphics[width=0.3\linewidth]{images/unamur.png}
+        \includegraphics[width=0.25\linewidth]{images/unamur.png}
     }
     &
-    \makecell[tl]{
+    \makecell[cl]{
         {\huge \textbf{\@title}}
         \rule{\paperwidth}{1pt} % will overflow but we don't care
-        \vspace{8pt}
+        \\
+        \subtitle
+        \\
+        \vspace{4pt}
         \\
         {\large \@author}
         \\

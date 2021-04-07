@@ -1,28 +1,18 @@
-%            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-%                    Version 2, December 2004
-%
-% Copyright (C) 2021 Pierre Luycx
-%
-% Everyone is permitted to copy and distribute verbatim or modified
-% copies of this license document, and changing it is allowed as long
-% as the name is changed.
-%
-%            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-%   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-%
-%  0. You just DO WHAT THE FUCK YOU WANT TO.
-
-
 % === PACKAGES ===
 % Font and encoding
 \documentclass[12pt]{article}
-\usepackage{pxfonts} % Palatino
+\usepackage{newpxtext} % Palatino
+\usepackage{newpxmath}
 \renewcommand{\familydefault}{\sfdefault} % sans-serif
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
 % Paper dimensions
-\usepackage[a4paper,portrait,margin=3cm]{geometry}
+\usepackage[a4paper,portrait,margin=2.5cm]{geometry}
+\usepackage{enumitem}
+\setlength{\parskip}{8pt}
+\setlist[itemize]{topsep=0,itemsep=0}
+\setlist[enumerate]{topsep=0,itemsep=0}
 
 % Utils
 \usepackage{graphicx}
@@ -30,6 +20,11 @@
 \usepackage{hyperref}
 \usepackage{numprint}
 \usepackage{eurosym}
+
+% Bibliography
+\usepackage{biblatex}
+\usepackage[nottoc]{tocbibind} % add the bibliography in the TOC
+\addbibresource{references.bib}
 
 % For a French document (remove for English)
 \usepackage[french]{babel}
@@ -43,8 +38,9 @@
 
 % === DOCUMENT ===
 \title{Template \LaTeX}
+\newcommand{\subtitle}{Pour les gens cools}
 \author{Pierre \bsc{Luycx}}
-\date{Février 2021}
+\date{Mars 2021}
 
 \begin{document}
 
@@ -57,5 +53,7 @@
 
 \appendix
 \input{sections/90_appendix}
+
+\printbibliography
 
 \end{document}
