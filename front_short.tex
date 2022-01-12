@@ -1,6 +1,6 @@
 \makeatletter % allow using \@title, \@author, and \@date
 
-\providecommand{\subtitle}{}
+\providecommand{\subtitle}{} % if \subtitle isn't defined
 
 \begin{tabular}{cc}
     \makecell{
@@ -8,7 +8,7 @@
     }
     &
     \makecell[cl]{
-        {\huge \textbf{\@title}}
+        {\sffamily \huge \textbf{\@title}}
         \rule{\paperwidth}{1pt} % will overflow but we don't care
         \\
         \subtitle

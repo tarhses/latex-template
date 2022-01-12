@@ -1,6 +1,6 @@
 \makeatletter % allow using \@title, \@author, and \@date
 
-\providecommand{\subtitle}{}
+\providecommand{\subtitle}{} % if \subtitle isn't defined
 
 \begin{center}
     \includegraphics[width=0.6\linewidth]{images/unamur.png}
@@ -8,7 +8,7 @@
 
 \vfill
 \noindent
-{\huge \textbf{\@title}}
+{\sffamily \huge \textbf{\@title}}
 \rule{\paperwidth}{1pt} % will overflow, but we don't care
 
 \noindent
@@ -16,11 +16,11 @@
 
 \vspace{32pt}
 \noindent
-{\Large \@author}
+{\large \@author}
 
 \vspace{10pt}
 \noindent
-{\Large \@date}
+{\large \@date}
 
 \newpage
 

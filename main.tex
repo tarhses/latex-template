@@ -3,80 +3,87 @@
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-
-%% Open Sans
-\usepackage[default]{opensans}
-%\renewcommand{\seriesdefault}{l} % light
-%\renewcommand{\mddefault}{l} % light
-%\renewcommand{\bfdefault}{sb} % semi-bold
-
-%% Palatino
-%\usepackage{newpxtext}
-%\usepackage{newpxmath}
-%\renewcommand{\familydefault}{\sfdefault} % sans-serif
+\usepackage{newpxtext,newpxmath} % Palatino
+\usepackage{sectsty} % change headings style
+\allsectionsfont{\sffamily}
 
 % Paper dimensions
 \usepackage[a4paper,portrait,margin=2.5cm]{geometry}
 \usepackage{enumitem}
-\setlength{\parskip}{8pt}
+\setlength{\parskip}{4pt}
 \setlist[itemize]{topsep=0pt,itemsep=0pt}
 \setlist[enumerate]{topsep=0pt,itemsep=0pt}
 
 % Utils
-\usepackage{hyperref} % hyper links
+\usepackage{hyperref} % hyperlinks
 \usepackage{graphicx} % include images
 \usepackage{array} % extension for tabular
 \usepackage{makecell} % extension for tabular
-\usepackage{numprint} % pretty print numbers
-\usepackage{eurosym} % euro symbol
 \usepackage{xcolor} % colored text
+\usepackage[autolanguage]{numprint} % pretty print numbers
 
 % Bibliography
 \usepackage{biblatex}
 \usepackage{csquotes}
-\usepackage[nottoc]{tocbibind} % add the bibliography in the TOC
 \addbibresource{references.bib}
 
-% Language
-%% English
-%\usepackage[english]{babel}
+% English
+\usepackage[english]{babel}
 
-%% French
-\usepackage[french]{babel}
-\usepackage{xspace} % put spaces in the right spots
-\frenchbsetup{StandardLists=true} % use bullets instead of hyphens
+% French
+%\usepackage[french]{babel}
+%\usepackage{xspace} % put spaces in the right spots
+%\frenchbsetup{StandardLists=true} % use bullets instead of hyphens
 
 % Utils (that need to be after babel for some reason)
 \usepackage{listings}
-\lstset{frame=single,numbers=left}
+\lstset{
+    frame=single,
+    numbers=left,
+    basicstyle=\sffamily\small,
+    stringstyle=\color{teal},
+    commentstyle=\color{teal},
+    showstringspaces=false,
+}
 
 
 % === COMMANDS ===
-% \TODO{...}: Mark a piece of text as unfinished.
-\newcommand{\TODO}[1]{%
-    \textbf{\color{red} #1}
+% \todo{...}: Mark something to do later.
+\newcommand{\todo}[1]{%
     \errmessage{There are still TODOs in the document}
+    \textbf{\color{red} TODO #1}
+}
+
+% \begin{notes} ... \end{notes}: Mark a piece of text as unfinished.
+\newenvironment{notes}{%
+    \errmessage{There are still notes in the document}
+    \begin{quote}
+    \color{blue}
+    \textbf{Notes}
+}{%
+    \end{quote}
 }
 
 
 % === DOCUMENT ===
-\title{Template \LaTeX}
-\newcommand{\subtitle}{Pour les gens cools}
-\author{Pierre \bsc{Luycx}}
-\date{Mars 2021}
+\title{\LaTeX\ Template}
+\newcommand{\subtitle}{For Cool People}
+\author{Pierre Luycx}
+\date{\today}
 
 \begin{document}
 
 %\input{front_full}
 \input{front_short}
 
-\tableofcontents\newpage
+\tableofcontents
+\newpage
 
-\input{sections/00_sample}
+\input{sections/10_introduction.tex}
+\input{sections/20_lorem.tex}
+\input{sections/30_conclusion.tex}
 
-\appendix
-\input{sections/90_appendix}
-
-\printbibliography
+\newpage
+\printbibliography[heading=bibintoc]
 
 \end{document}

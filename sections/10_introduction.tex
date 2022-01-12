@@ -1,0 +1,48 @@
+\section{Introduction}
+
+\subsection{Why is It Cool?}
+
+It's actually not that special. It's just me learning \LaTeX\ through the years and improving my one and only template. However, I think it could interest you a bit.
+
+It uses the \textit{Palatino} typeface for its sections' content and \textit{Helvetica} for their headings. These are remarkable by their elegance.
+
+The front page is available in two formats, one taking an entire page and the other having a shorter header form. To use one or the other, simply use the corresponding \textit{input} in ``main.tex''.
+
+I've added a simple command and a new environment to mark unfinished work. These are \textit{todo} and \textit{notes}. If you're lazy, you can always add a \todo{Finish this sentence.} And if you're simply starting by writing some ideas before actual redaction, the \textit{notes} environment will help you:
+
+\begin{notes}
+Here, I'm going to talk about the template specific features.
+
+I should add a section about useful commands to remember them. I wont forget, right?
+\end{notes}
+
+Finally, a nice feature is that using \textit{todo} or \textit{notes} will automatically trigger an error during compilation to remind you to remove them. That's only useful if you actually read the errors though\dots
+
+\subsection{Some Fun Commands}
+
+Some common packages are included in this template. You should totally take a look at these. For instance, if you want to write a big number down: \numprint{3745000}~kg. Commas, dots (or unbreakable spaces if you're French) will automatically be placed at the right spots.
+
+If you're a real hacker and if you want to put some source code in your document, you can use the following. Please note that you can do the same thing by including source code from another file by using \textit{lstinputlisting}.
+% e.g. \lstinputlisting[language=java]{listings/PiCalculator.java}
+
+\begin{lstlisting}[language=java]
+public class PiCalculator {
+    public static void main(String[] args) {
+        System.out.println("Let me compute pi: " + compute_pi());
+    }
+    
+    public static double compute_pi() {
+        // You really thought I was able to compute that?
+        return 3.14;
+    }
+}
+\end{lstlisting}
+
+There's not much more to say. You can, of course, use \href{https://en.wikipedia.org/wiki/Hyperlink}{hyperlinks} or bare bone URLs: \url{https://example.com/}. Adding images is simple too. Take a look at figure \ref{fig:unamur_logo}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.4\linewidth]{images/unamur.png}
+    \caption{UNamur's logo}
+    \label{fig:unamur_logo}
+\end{figure}
